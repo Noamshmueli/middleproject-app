@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && \
-    apk add  python3 && \
+    apk add python3 && \
     apt install python3-flask && \
     apt install python3-pip && \
     apt-get install python3.6-dev libmysqlclient-dev && \
