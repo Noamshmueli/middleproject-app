@@ -3,7 +3,8 @@ FROM alpine:latest
 RUN apk update && \
     apk add  python3 && \
     
-RUN apt-get install python3.6-dev && \    
+RUN apt-get install -y \
+    python3-flask \
  
 
 # We copy just the requirements.txt first to leverage Docker cache
