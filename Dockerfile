@@ -14,5 +14,7 @@ COPY . /app
 
 RUN export FLASK_APP=__init__.py
 
+ENTRYPOINT [ "python3" ]
+
 CMD [ "flask run --host=0.0.0.0 --port=8080" ]
 
