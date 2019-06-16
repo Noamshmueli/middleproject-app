@@ -3,7 +3,7 @@ FROM alpine:latest
 RUN apk update && \
     apk add  python3 && \
     
-RUN apt-get install -y \
+RUN apt install -y \
     python3-flask \
  
 
