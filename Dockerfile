@@ -1,10 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && \
-    apk add python3 && \
-    apt install python3-flask && \
-    apt install python3-pip && \
-    apt-get install python3.6-dev libmysqlclient-dev && \
+    apk add python3
 
 # We copy just the requirements.txt first to leverage Docker cache
 COPY ./requirements.txt /app/requirements.txt
