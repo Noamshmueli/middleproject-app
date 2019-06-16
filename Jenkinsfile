@@ -21,21 +21,9 @@ node('node1') {
     sh "docker run -d --name ${ContainerName} --rm -p 8081:5000 ${DockerImage}; sleep 5"
   }
   
-  stage('Test') { // Run tests on container
-    def dockerOutput = sh (
-        script: 'curl http://172.17.0.1:8081/goaway',
-        returnStdout: true
-        ).trim()
-    sh "docker rm -f ${ContainerName}"
-    
-    if ( dockerOutput == 'GO AWAY!' ) {
-        currentBuild.result = 'SUCCESS'
-    } else {
-        currentBuild.result = 'FAILURE'
-        sh "echo ${ContainerName} returned ${dockerOutput}"
-    }
-    return
-  }
+  
+  
+  
 
 
   stage('Push') { // Push the image to repository
