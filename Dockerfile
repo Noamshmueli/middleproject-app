@@ -8,13 +8,11 @@ COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
-COPY __init__.py __init__.py
+COPY . /app
 
 RUN export FLASK_APP=__init__.py
 
 RUN pip3 install -r requirements.txt
-
-#COPY . /app
 
 RUN export FLASK_APP=__init__.py
 
