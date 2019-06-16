@@ -12,7 +12,7 @@ RUN pip3 install -r requirements.txt
 
 COPY . /app
 
-RUN FLASK_APP=__init__.py
+RUN export FLASK_APP=__init__.py
 
 ENTRYPOINT [ "python3" ]
 
