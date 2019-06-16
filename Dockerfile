@@ -2,10 +2,7 @@ FROM alpine:latest
 
 RUN apk update && \
     apk add  python3 && \
-    
-RUN apt install -y \
-    python3-flask \
- 
+
 
 # We copy just the requirements.txt first to leverage Docker cache
 COPY ./requirements.txt /app/requirements.txt
