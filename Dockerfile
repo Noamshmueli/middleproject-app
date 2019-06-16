@@ -8,6 +8,8 @@ COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
+RUN export FLASK_APP=__init__.py
+
 RUN pip3 install -r requirements.txt
 
 #COPY . /app
