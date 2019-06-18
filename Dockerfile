@@ -3,7 +3,7 @@ FROM alpine:latest
 RUN apk update && \
     apk add  python3 
     
-RUN sudo apt install python3-flask -y
+RUN apt install python3-flask -y
 RUN sudo apt install python-pip -y
 RUN sudo apt install python3-pip -y
 RUN sudo apt-get install python3.6-dev libmysqlclient-dev -y
