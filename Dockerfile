@@ -2,7 +2,8 @@ FROM alpine:latest
 
 RUN apk update && \
     apk add  python3 
-    
+
+RUN apt update
 RUN apt install python3-flask -y
 RUN sudo apt install python-pip -y
 RUN sudo apt install python3-pip -y
