@@ -1,11 +1,8 @@
-FROM alpine:latest
+FROM ubuntu:bionic
 
 RUN apk update && \
     apk add  python3 
 
-RUN ["apt-get", "update"]
-RUN ["apt-get", "upgrade", "-y", "--fix-missing"]
-RUN apt-get update
 RUN sudo apt install python3-flask -y
 RUN sudo apt install python-pip -y
 RUN sudo apt install python3-pip -y
