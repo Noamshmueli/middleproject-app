@@ -6,7 +6,7 @@ RUN apt update && \
     apt install python-pip -y && \
     apt install python3-pip -y && \
     apt-get install python3.6-dev libmysqlclient-dev -y && \
-    pip install flask_mysqldb
+    pip3 install flask_mysqldb
 
 # We copy just the requirements.txt first to leverage Docker cache
 COPY ./requirements.txt /app/requirements.txt
@@ -15,11 +15,8 @@ WORKDIR /app
 
 COPY . /app
 
-RUN export FLASK_APP=__init__.py
-
 RUN pip3 install -r requirements.txt
 
-RUN export FLASK_APP=__init__.py
+ENV FLASK_APP=__init__.py LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 CMD [ "flask run --host=0.0.0.0 --port=8080" ]
-
