@@ -18,7 +18,7 @@ node('node1') {
   }
   
   stage('Run') { // Run the built image
-    sh "docker run -it -p 8080:8080 noamshmueli/projectimage; sleep 5"
+    sh "docker run -d -p 8080:8080 ${DockerImage}; sleep 5"
   }
   
   
