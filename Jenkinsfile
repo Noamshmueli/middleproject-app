@@ -1,5 +1,5 @@
 node('node1') { 
-  def DockerImage = "noamshmueli/projectimage:v1.0"
+  def DockerImage = "noamshmueli/projectimage"
   def ContainerName = "project_container"
 
   stage('Pre') { // Run pre-build steps
