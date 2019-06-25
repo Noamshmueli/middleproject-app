@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: project-container
-        image: noamshmueli/projectimage:latest
+        image: noamshmueli/projectimage:v1.0
         ports:
         - containerPort: 8080
   
