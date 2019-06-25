@@ -22,5 +22,5 @@ spec:
       - name: project-container
         image: noamshmueli/projectimage:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
   
