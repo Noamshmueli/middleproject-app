@@ -18,4 +18,4 @@ RUN pip3 install -r requirements.txt
 
 ENV FLASK_APP=__init__.py LANG=C.UTF-8 LC_ALL=C.UTF-8
 
-CMD [ "python", "-m", "flask", "run", "--host=0.0.0.0", "--port=8080" ]
+CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=8080" ]
