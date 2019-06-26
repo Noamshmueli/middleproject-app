@@ -18,7 +18,7 @@ node('node1') {
   }
   
   stage('Run') { // Run the built image
-    sh "docker run -d --name ${ContainerName} --rm -p 8081:5000 ${DockerImage}; sleep 5"
+    sh "docker run --rm-d --name ${ContainerName} -p 8081:5000 ${DockerImage}; sleep 5"
   }
   
 
