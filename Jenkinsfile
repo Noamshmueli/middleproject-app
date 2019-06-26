@@ -20,15 +20,17 @@ node('node1') {
   stage('Run') { // Run the built image
     sh "docker run -d --name ${ContainerName} --rm -p 8081:5000 ${DockerImage}; sleep 5"
   }
+  
 
 
   stage('Push') { // Push the image to repository
    withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
          sh "docker push ${DockerImage}"
        }
-
+   sh "docker rmi ${DockerImage}"
    return
  }
+
 
 
 
