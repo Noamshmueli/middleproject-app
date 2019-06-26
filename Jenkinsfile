@@ -27,7 +27,7 @@ node('node1') {
    withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
          sh "docker push ${DockerImage}"
        }
-         sh "sudo docker rmi ${DockerImage}"    
+         sh "sudo docker rmi -f ${DockerImage}"    
    return
  }
 
